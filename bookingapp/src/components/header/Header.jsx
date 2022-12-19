@@ -2,6 +2,9 @@ import React from 'react'
 import './header.css'
 import {
   faBed,
+  faBedPulse,
+  faCalendar,
+  faCalendarDays,
   faCar,
   faPlane,
   faTaxi,
@@ -13,23 +16,23 @@ const Header = () => {
       <div className="headerContainer">
         <div className="headerList">
           <div className="headerListItem active">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon className="icon" icon={faBed} />
             <span>Stays</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faPlane} />
+            <FontAwesomeIcon className="icon" icon={faPlane} />
             <span>Flights</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faCar} />
+            <FontAwesomeIcon className="icon" icon={faCar} />
             <span>Car Rental</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon className="icon" icon={faBed} />
             <span>Attractions</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faTaxi} />
+            <FontAwesomeIcon className="icon" icon={faTaxi} />
             <span>Airport Taxi</span>
           </div>
         </div>
@@ -37,6 +40,25 @@ const Header = () => {
         <p className="headerDesc">
           Search low prices on hotels, homes and much more...
         </p>
+        <div className="headerSearch">
+          <div className="headerSearchItem">
+            <FontAwesomeIcon className="icon" icon={faBed} />
+            <input
+              type="text"
+              placeholder="where are you going?"
+              name=""
+              className="headerSearchButton"
+            />
+          </div>
+          <div className="headerSearchItem">
+            <FontAwesomeIcon className="icon" icon={faCalendarDays} />
+            <span className="headerSearchText">Date to Date</span>
+          </div>
+          <div className="headerSearchItem">
+            <FontAwesomeIcon className="icon" icon={faBed} />
+            <span className="headerSearchText">2 Adult 2 Children</span>
+          </div>
+        </div>
       </div>
     </div>
   )
